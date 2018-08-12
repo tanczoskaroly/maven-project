@@ -7,7 +7,7 @@ pipeline {
         stage('Build'){
             steps{
                 sh 'mvn clean package'
-                sh 'cp target/webapp.war /Volumes/Docker/code/docker/'
+                sh 'cp webapp/target/webapp.war /Volumes/Docker/code/docker/'
                 //sh "docker build . -t tomcatwebapp:${env.BUILD_ID}"
             }
         }
